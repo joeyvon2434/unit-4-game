@@ -17,6 +17,7 @@
 }
 
 #chooseCharacter {
+    /*Change disply property with Jquery at start and end of game*/
     position: relative;
     width: 66.66%;
     margin: 30px auto 30px auto;
@@ -40,6 +41,7 @@
 }
 
 #game-box {
+    /*Change disply property with Jquery at start and end of game*/
     position: relative;
     width: 66.66%;
     margin: 30px auto 75px auto;
@@ -71,6 +73,7 @@
 
 #defeated-box {
     width: 66.66%;
+    min-height: 75px;
     margin: 0 auto 3% auto;
 }
 
