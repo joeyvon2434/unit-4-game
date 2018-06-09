@@ -1,7 +1,11 @@
 #wrapper {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     min-height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 #main-title {
@@ -38,13 +42,21 @@
 #game-box {
     position: relative;
     width: 66.66%;
-    margin: 30px auto 30px auto;
+    margin: 30px auto 75px auto;
+}
+
+#attack-button {
+    position: relative;
+    width: 25%;
+    margin: 3% auto 0 auto;
+    text-align: center;
 }
 
 .game-box-content {
     display: inline-block;
+    min-height: 300px;
     padding: 0;
-    margin: 3% 3% 3% auto;
+    margin: 3% auto 3% 3%;
     border: 1px solid blue;
 }
 
@@ -56,6 +68,12 @@
     width: 15%;
     padding: 0;
 }
+
+#defeated-box {
+    width: 66.66%;
+    margin: 0 auto 3% auto;
+}
+
 
 footer{
     position: absolute;
