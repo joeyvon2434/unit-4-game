@@ -1,26 +1,27 @@
 //Javascript file containing working code for the Star Wars: Starfighter Challenge
 
-var xWing = {
-    HP: 200,
-    attackPower: 15,
-    counterAttack: 10,
-}
 
-var aWing = {
-    HP: 120,
-    attackPower: 25,
-    counterAttack: 15,
-}
+//Variable lists
+   var selHP =1;
+   var selAttack =1;
+   var originalAttack =1;
 
-var tieFighter = {
-    HP: 150,
-    attackPower: 5,
-    counterAttack: 25,
-}
 
-var tieInterceptor = {
-    HP: 175,
-    attackPower: 20,
-    counterAttack: 20,
-}
+   $( document ).ready(function () {
 
+
+//Click funtion to define selected fighter and write in initial stats
+    $(".star-ship").on("click", function () {
+        selectedFighter = $(this).attr('value');
+            selHP = $(this).data("health");
+            selAttack = $(this).data("attack");
+            selOriginalAttack = $(this).data("counter-attack");
+            //if statement to set picture source to correct fighter, or us another data attribute
+        
+
+    });
+
+
+
+
+});
