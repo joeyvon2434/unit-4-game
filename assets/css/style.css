@@ -20,7 +20,7 @@
     /*Change disply property with Jquery at start and end of game*/
     position: relative;
     width: 66.66%;
-    margin: 30px auto 30px auto;
+    margin: 30px auto 75px auto;
 }
 
 .choose-image {
@@ -72,12 +72,12 @@
     border: 1px solid blue;
 }
 
-#chosen-character {
-    max-width: 90%;
-}
-
 .vs-box {
     width: 35%;
+}
+
+.vs-image {
+    width: 90%;
 }
 
 .remaining-box {
@@ -97,8 +97,6 @@
 
 .small-image {
     max-width: 100%;
-    margin-left: auto;
-    margin-right;
 }
 
 #defeated-box {
