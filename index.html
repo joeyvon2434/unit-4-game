@@ -25,20 +25,20 @@
             <!--Different choices for star fighters: See javascript text for additional
             details on the set up-->
 
-            <div class="star-ship" id="xWing" data-ship="xWing" data-health="200" data-attack="15" data-counter-attack="10">
-                <img src="#" alt="X Wing">
+            <div class="star-ship" data-ship="xWing" data-health="200" data-attack="15" data-counter-attack="10" data-image-link="assets/images/x-wing.png">
+                <img class="choose-image" src="assets/images/x-wing.png" alt="X Wing">
             </div>
 
-            <div class="star-ship" id="aWing" data-ship="aWing" data-health="120" data-attack="25" data-counter-attack="15">
-                <img src="#" alt="A Wing">
+            <div class="star-ship" data-ship="aWing" data-health="120" data-attack="25" data-counter-attack="15" data-image-link="assets/images/a-wing.png">
+                <img class="choose-image" src="assets/images/a-wing.png" alt="A Wing">
             </div>
 
-            <div class="star-ship bottom-ship" id="tieFighter" data-ship="tieFighter"  data-health="150" data-attack="5" data-counter-attack="25">
-                <img src="#" alt="Tie Figeter">
+            <div class="star-ship bottom-ship" data-ship="tieFighter"  data-health="150" data-attack="5" data-counter-attack="25" data-image-link="assets/images/tie-fighter-2.png">
+                <img class="choose-image" src="assets/images/tie-fighter-2.png" alt="Tie Figeter">
             </div>
 
-            <div class="star-ship bottom-ship" id="tieInterceptor" data-ship="tieInterceptor"  data-health="175" data-attack="20" data-counter-attack="20">
-                <img src="#" alt="Tie Interceptor">
+            <div class="star-ship bottom-ship" data-ship="tieInterceptor"  data-health="175" data-attack="20" data-counter-attack="20" data-image-link="assets/images/tie-interceptor.png">
+                <img class="choose-image" src="assets/images/tie-interceptor.png" alt="Tie Interceptor">
             </div>
 
         </div>
@@ -59,6 +59,7 @@
 
             <div class="game-box-content vs-box" id="character">
                 character
+                <img id="chosen-character" src="#"> <!--Change source with selected fighter-->
             </div>
 
             <div class="game-box-content vs-box" id="opponent">
@@ -66,10 +67,10 @@
             </div>
             
             <div class="game-box-content remaining-box" id="remaining-opponents">remaining
-                <div class="up-next" >X-Wing</div>
-                <div class="up-next">A-Wing</div>
-                <div class="up-next">Tie Fighter</div>
-                <div class="up-next">Tie Interceptor</div>             
+                <div id="xWing" class="up-next" data-ship="xWing">X-Wing</div>
+                <div id="aWing" class="up-next" data-ship="aWing">A-Wing</div>
+                <div id="tieFighter" class="up-next" data-ship="tieFighter">Tie Fighter</div>
+                <div id="tieInterceptor" class="up-next" data-ship="tieInterceptor">Tie Interceptor</div>             
 
             </div>
 
@@ -83,7 +84,7 @@
 
         </div>
 
-        <footer>Joseph Von Edwins 2018</footer>
+        <footer>Images from: <a href="http://starwars.wikia.com/wiki/Main_Page"> Wookiepedia </a>     Site by: Joseph Von Edwins 2018</footer>
     </div>
 
     <!--Link to JQuery library-->
