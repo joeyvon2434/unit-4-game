@@ -89,6 +89,13 @@
     margin: 0 auto 3% auto;
 }
 
+.defeated-opponents {
+    display: inline-block;
+    width: 20%;
+    margin: 10px auto 10px auto;
+    border: 1px solid black;
+    min-height: 50px;
+}
 
 footer{
     position: absolute;
