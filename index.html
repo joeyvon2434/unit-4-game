@@ -11,12 +11,20 @@
 </head>
 
 <body>
+
+    <!--Wrapper to allow sticky footer to function-->
     <div id="wrapper">
 
         <h1 id="main-title">Star Wars: Star Fighter Challenge</h1>
 
+    <!--Box to choose character. This should disappear with dsiplay none when the
+    character is chosen. It will reappear when new game is clicked-->
+
         <div id="chooseCharacter" style="border: 1px solid green;">
             
+            <!--Different choices for star fighters: See javascript text for additional
+            details on the set up-->
+
             <div class="star-ship" id="xWing">
                 <img src="#" alt="X-Wing">
             </div>
@@ -35,16 +43,54 @@
 
         </div>
 
+    <!--This box contains the game itself. It will start with display none and appear
+    when a character is selected. Upon win or los, a "New Game" button will be used to 
+    hide this box, and return to the home choose character screen.-->    
+
         <div id="game-box" style="border: 1px solid green;">
-            <div id="attack-button"  style="border: 1px solid green;">Attack</div>
-            <div class="game-box-content vs-box" id="character">character</div>
-            <div class="game-box-content vs-box" id="opponent">opponet</div>
-            <div class="game-box-content remaining-box" id="remaining-opponents">remaining</div>
-            <div id="defeated-box"  style="border: 1px solid orange;">defeated</div>
+
+            <div id="attack-button"  style="border: 1px solid green;">
+                Attack
+            </div>
+
+            <!--These divs contain the characters and opponents and should match the ones
+            from the character choice page. Javascript will change these items for the majority
+            of the game functionality.-->
+
+            <div class="game-box-content vs-box" id="character">
+                character
+            </div>
+
+            <div class="game-box-content vs-box" id="opponent">
+                opponet
+            </div>
+            
+            <div class="game-box-content remaining-box" id="remaining-opponents">
+                remaining
+            </div>
+
+            <div id="defeated-box"  style="border: 1px solid orange;">
+                defeated
+            </div>
+
         </div>
 
         <footer>Joseph Von Edwins 2018</footer>
     </div>
+
+    <!--Link to JQuery library-->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+    <!--Link to local javascript files-->
+    <script type="text/javascript" src="assets/javascript/game.js">
+    
+    
+    </script>
+
+
 </body>
 
 </html>
