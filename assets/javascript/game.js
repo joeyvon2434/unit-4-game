@@ -83,6 +83,7 @@ $(document).ready(function () {
         opponentHP = $(this).data('health');
         opponentCounterAttack = $(this).data('counter-attack');
         $('#current-opponent').attr('src',opponentImage);
+        $('current-opponent').show();
         
     //Hide selected opponent in remaining opponents box
 
@@ -116,6 +117,7 @@ $(document).ready(function () {
                     alert('Congratulations! You are Victorious!');
                   //  newGame();
                 }
+                $('#current-opponent').hide();
                 alert('Select your next opponent!');
             } 
 
