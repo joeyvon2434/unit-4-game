@@ -15,6 +15,12 @@ var opponentCounterAttack = 0;
 
 $(document).ready(function () {
 
+    //===========================
+    //create new game function here
+    //===========================
+
+
+
 //BEGIN MAJOR SECTION 1: Game Set Up
 //============================================
     //Click funtion to define selected fighter and write in initial stats from data attributes in HTML
@@ -99,16 +105,29 @@ $(document).ready(function () {
 
             opponentHP = opponentHP - playerAttack;
             console.log('hp' + opponentHP);
-
+        
             playerAttack = playerAttack + playerOriginalAttack;
             console.log('sa '+ playerAttack);
+
+            //check for current opponent defeat and overall victory
+            if(opponentHP <= 0) {
+                defeatedOpponentCounter = defeatedOpponentCounter + 1;
+                if (defeatedOpponentCounter == 3) {
+                    alert('Congratulations! You are Victorious!');
+                  //  newGame();
+                }
+                alert('Select your next opponent!');
+            } 
 
 
     //Continue with opponents counter attck and health decrease of character
             playerHP = playerHP - opponentCounterAttack;
-
+            console.log(playerHP);
     //Use if statement to see if character is defeated, if so, display game over and New Game button
-
+            if (playerHP <= 0) {
+                alert('Game Over! The Force is not strong with this one.')
+                //newGame();
+            }
 
 
 //END MAJOR SECTION THREE: Attack Dynamics and Battle
