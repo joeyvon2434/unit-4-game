@@ -11,6 +11,7 @@ var currentOpponent = '';
 var defeatedOpponentCounter = 0;
 var opponentHP = 0;
 var opponentCounterAttack = 0;
+var opponentImage;
 
 
 $(document).ready(function () {
@@ -64,7 +65,7 @@ $(document).ready(function () {
 
         //Hide images in defeated opponents box
 
-        $('.defeated-opponents').hide();
+        //$('.defeated-opponents').hide();
 
         alert('Choose your first opponent on the right!');
     });
@@ -79,11 +80,11 @@ $(document).ready(function () {
 
     $('.up-next').on('click', function() {
         currentOpponent = $(this).data('ship');
-        var opponentImage = $(this).data('image-link');
+        opponentImage = $(this).data('image-link');
         opponentHP = $(this).data('health');
         opponentCounterAttack = $(this).data('counter-attack');
         $('#current-opponent').attr('src',opponentImage);
-        $('current-opponent').show();
+        $('#current-opponent').show();
         
     //Hide selected opponent in remaining opponents box
 
@@ -119,6 +120,16 @@ $(document).ready(function () {
                 }
                 $('#current-opponent').hide();
                 alert('Select your next opponent!');
+                //create div with an image of the defeated opponent
+                var defeatedDiv = $('<div>');
+                defeatedDiv.addClass('defeated-opponents');
+                var defeatedImg = $('<img>');
+                defeatedImg.addClass('small-image')
+                defeatedImg.attr('src',opponentImage)
+                defeatedDiv.append(defeatedImg);
+                $('#defeated-box').append(defeatedDiv);
+
+
             } 
 
 
