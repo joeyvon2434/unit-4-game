@@ -40,7 +40,7 @@
     margin-bottom: 0;
     margin-left: 6%;
     margin-right: 0;
-    background-color: black;
+    background: linear-gradient(black,rgb(34, 2, 49),black);
 }
 
 .bottom-ship {
@@ -55,7 +55,7 @@
     margin: 30px auto 75px auto;
 }
 
-#attack-button {
+#fire-button {
     position: relative;
     width: 25%;
     margin: 3% auto 0 auto;

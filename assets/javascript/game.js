@@ -2,9 +2,9 @@
 
 
 //Variable lists
-var selHP = 1;
-var selAttack = 1;
-var selOriginalAttack = 1;
+var playerHP = 1;
+var playerAttack = 1;
+var playerOriginalAttack = 1;
 var selectedFighter = '';
 var characterSourceImage = '';
 var currentOpponent = '';
@@ -22,9 +22,9 @@ $(document).ready(function () {
     
     $(".star-ship").on("click", function () {
         selectedFighter = $(this).data("ship");
-        selHP = $(this).data("health");
-        selAttack = $(this).data("attack");
-        selOriginalAttack = $(this).data("counter-attack");
+        playerHP = $(this).data("health");
+        playerAttack = $(this).data("attack");
+        playerOriginalAttack = $(this).data("attack");
 
         //**** if statement to set picture source to correct fighter in the character box, or 
         //use another data attribute to define the source
@@ -97,10 +97,15 @@ $(document).ready(function () {
     //a new game button.
         $('#fire-button').on('click', function() {
 
+            opponentHP = opponentHP - playerAttack;
+            console.log('hp' + opponentHP);
+
+            playerAttack = playerAttack + playerOriginalAttack;
+            console.log('sa '+ playerAttack);
 
 
     //Continue with opponents counter attck and health decrease of character
-
+            playerHP = playerHP - opponentCounterAttack;
 
     //Use if statement to see if character is defeated, if so, display game over and New Game button
 
