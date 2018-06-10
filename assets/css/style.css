@@ -95,6 +95,10 @@
     border: 1px solid black;
 }
 
+.remain-image {
+    max-width: 100%;
+}
+
 #defeated-box {
     width: 66.66%;
     min-height: 75px;
