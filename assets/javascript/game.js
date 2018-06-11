@@ -24,7 +24,7 @@ $(document).ready(function () {
     });
 
     $('#close-instructions').on('click', function() {
-        $('#instructions-box').hide();
+        $('#instructions-box').fadeOut(500); /*here*/
     });
 
     //===========================
@@ -42,15 +42,15 @@ $(document).ready(function () {
         opponentCounterAttack = 0;
         opponentImage = '';
         allowOpponentSelect = true;
-        $('#game-box').hide();
-        $('#new-game-box').hide();
-        $('#new-game-button').hide();
+        $('#game-box').fadeOut(700);/*here*/
+        $('#new-game-box').fadeOut(700);/*here*/
+        $('#new-game-button').fadeOut(700);/*here*/
         $('#defeated-box').text('');
         $('#xWing').show();
         $('#aWing').show();
         $('#tieFighter').show();
         $('#tieInterceptor').show();
-        $('#chooseCharacter').show();
+        $('#chooseCharacter').fadeIn(700);/*here*/
         $('#opponent-health').text('');
         $('#opponent-attack').text('');
 
@@ -62,8 +62,8 @@ $(document).ready(function () {
     //===========================
 
     function displayNewGameButton() {
-        $('#new-game-box').show();
-        $('#new-game-button').show();
+        $('#new-game-box').fadeIn(700); /*here*/
+        $('#new-game-button').fadeIn(700); /*here*/
     }
 
 
@@ -88,12 +88,12 @@ $(document).ready(function () {
 
         // set display of the character select box to 'none'
 
-        $('#chooseCharacter').hide();
+        $('#chooseCharacter').fadeOut(700); /*here*/
 
         //set game box to display, and display the non-selected characters in the remaining window
         //game Box
 
-        $('#game-box').show();
+        $('#game-box').delay(700).fadeIn(700); /*here*/
 
         //Hide selected fighter from remaining fighters box
 
@@ -112,7 +112,6 @@ $(document).ready(function () {
 
         //Hide images in defeated opponents box
 
-        //$('.defeated-opponents').hide();
 
     });
 
@@ -137,7 +136,7 @@ $(document).ready(function () {
         opponentCounterAttack = $(this).data('counter-attack');
         $('#opponent-health').text('Health: ' + opponentHP);
         $('#current-opponent').attr('src',opponentImage);
-        $('#current-opponent').show();
+        $('#current-opponent').fadeIn(700); /*here*/
         allowOpponentSelect = false;
         
     //Hide selected opponent in remaining opponents box
@@ -190,7 +189,7 @@ $(document).ready(function () {
                 //create div with an image of the defeated opponent and place
                 //it into the defeated player box
 
-                $('#current-opponent').hide();
+                $('#current-opponent').fadeOut(700); /*here*/
                 var defeatedDiv = $('<div>');
                 defeatedDiv.addClass('defeated-opponents');
                 var defeatedImg = $('<img>');
