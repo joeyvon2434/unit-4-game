@@ -71,10 +71,12 @@ $(document).ready(function () {
     //and continue to set up the character and remaining opponents boxes
     
     $(".star-ship").on("click", function () {
+        $('#current-opponent').hide();
         selectedFighter = $(this).data("ship");
         playerHP = $(this).data("health");
         playerAttack = $(this).data("attack");
         playerOriginalAttack = $(this).data("attack");
+        $('#player-health').text('Health: ' + playerHP);
 
         //**** if statement to set picture source to correct fighter in the character box, or 
         //use another data attribute to define the source
@@ -110,7 +112,6 @@ $(document).ready(function () {
 
         //$('.defeated-opponents').hide();
 
-        alert('Choose your first opponent on the right!');
     });
 
 //END MAJOR SECTION ONE: Game Set Up
@@ -132,6 +133,7 @@ $(document).ready(function () {
         opponentImage = $(this).data('image-link');
         opponentHP = $(this).data('health');
         opponentCounterAttack = $(this).data('counter-attack');
+        $('#opponent-health').text('Health: ' + opponentHP);
         $('#current-opponent').attr('src',opponentImage);
         $('#current-opponent').show();
         allowOpponentSelect = false;
@@ -165,10 +167,10 @@ $(document).ready(function () {
         if (allowOpponentSelect == false) {
 
             opponentHP = opponentHP - playerAttack;
-            console.log('hp' + opponentHP);
+            $('#opponent-health').text('Health: ' + opponentHP);
         
             playerAttack = playerAttack + playerOriginalAttack;
-            console.log('sa '+ playerAttack);
+            
 
             //check for current opponent defeat and overall victory
             if(opponentHP <= 0 && allowOpponentSelect == false) {
@@ -202,7 +204,7 @@ $(document).ready(function () {
     //Continue with opponents counter attck and health decrease of character
         if (defeatedOpponentCounter < 3) {    
         playerHP = playerHP - opponentCounterAttack;
-            console.log(playerHP);
+        $('#player-health').text('Health: ' + playerHP);
         };
     //Use if statement to see if character is defeated, if so, display game over and New Game button
             if (playerHP <= 0) {
