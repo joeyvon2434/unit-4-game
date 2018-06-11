@@ -115,6 +115,7 @@ body {
     position: relative;
     width: 66.66%;
     margin: 10px auto 75px auto;
+    border: 1px solid rgb(37, 6, 110);
 }
 
 #fire-button {
@@ -122,6 +123,14 @@ body {
     width: 25%;
     margin: 3% auto 0 auto;
     text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    background-color: rgb(170, 12, 12);
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
 }
 
 .game-box-content {
@@ -178,24 +187,25 @@ h3 {
     min-height: 75px;
     padding: 0;
     margin: 10px auto 10px auto;
-    border: 1px solid black;
 }
 
 .small-image {
     max-width: 100%;
+   
 }
 
 #defeated-box {
     width: 66.66%;
     min-height: 75px;
     margin: 0 auto 3% auto;
+    border: 1px solid rgb(177, 10, 10);
+    background-color: rgb(156, 4, 4, 0.3);
 }
 
 .defeated-opponents {
     display: inline-block;
     width: 25%;
     margin: 10px auto 10px 5%;
-    border: 1px solid black;
     min-height: 50px;
 }
 
