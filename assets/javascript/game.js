@@ -116,11 +116,12 @@ $(document).ready(function () {
                 defeatedOpponentCounter = defeatedOpponentCounter + 1;
                 if (defeatedOpponentCounter == 3) {
                     alert('Congratulations! You are Victorious!');
-                  //  newGame();
+                  // **** newGame(); //(make a new game button appear)
+
                 }
-                $('#current-opponent').hide();
-                alert('Select your next opponent!');
+
                 //create div with an image of the defeated opponent
+                $('#current-opponent').hide();
                 var defeatedDiv = $('<div>');
                 defeatedDiv.addClass('defeated-opponents');
                 var defeatedImg = $('<img>');
@@ -129,18 +130,22 @@ $(document).ready(function () {
                 defeatedDiv.append(defeatedImg);
                 $('#defeated-box').append(defeatedDiv);
 
-
-            } 
+                if(defeatedOpponentCounter < 3){
+                alert('Select your next opponent!');
+            }
+            }
 
 
     //Continue with opponents counter attck and health decrease of character
-            playerHP = playerHP - opponentCounterAttack;
+        if (defeatedOpponentCounter < 3) {    
+        playerHP = playerHP - opponentCounterAttack;
             console.log(playerHP);
+        };
     //Use if statement to see if character is defeated, if so, display game over and New Game button
             if (playerHP <= 0) {
                 alert('Game Over! The Force is not strong with this one.')
                 //newGame();
-            }
+            };
 
 
 //END MAJOR SECTION THREE: Attack Dynamics and Battle
