@@ -138,15 +138,23 @@ body {
 }
 
 h3 {
+    margin-top: 20px;
     font-size: 20px;
 }
 
 .game-stat {
     position: absolute;
-    bottom: 10%;
     left: 10%;
     width: 80%;
     text-align: center;
+}
+
+.health-stat {
+    bottom: 20%;
+}
+
+.attack-stat {
+    bottom: 10%;
 }
 
 .vs-box {
@@ -155,7 +163,7 @@ h3 {
 
 .vs-image {
     width: 90%;
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
 .remaining-box {

@@ -168,6 +168,7 @@ $(document).ready(function () {
 
             opponentHP = opponentHP - playerAttack;
             $('#opponent-health').text('Health: ' + opponentHP);
+            $('#player-attack').text('Last Attack Damage: ' + playerAttack);
         
             playerAttack = playerAttack + playerOriginalAttack;
             
@@ -205,6 +206,7 @@ $(document).ready(function () {
         if (defeatedOpponentCounter < 3) {    
         playerHP = playerHP - opponentCounterAttack;
         $('#player-health').text('Health: ' + playerHP);
+        $('#opponent-attack').text('Last Attack Damage: ' + opponentCounterAttack);
         };
     //Use if statement to see if character is defeated, if so, display game over and New Game button
             if (playerHP <= 0) {
