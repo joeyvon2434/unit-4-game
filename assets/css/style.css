@@ -113,6 +113,28 @@
     min-height: 50px;
 }
 
+#new-game-box {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50vh;
+    opacity: 0.8;
+    background-color: rgb(80, 79, 79);
+}
+
+#new-game-button {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    width: 20%;
+    height: 10%;
+    background: green;
+    opacity: 1.0;
+}
+
 footer{
     position: absolute;
     bottom: 0;

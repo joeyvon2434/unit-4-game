@@ -11,7 +11,7 @@ var currentOpponent = '';
 var defeatedOpponentCounter = 0;
 var opponentHP = 0;
 var opponentCounterAttack = 0;
-var opponentImage;
+var opponentImage='';
 
 
 $(document).ready(function () {
@@ -19,7 +19,38 @@ $(document).ready(function () {
     //===========================
     //create new game function here
     //===========================
+    $('#new-game-button').on('click', function() {
+        playerHP = 1;
+        playerAttack = 1;
+        playerOriginalAttack = 1;
+        selectedFighter = '';
+        characterSourceImage = '';
+        currentOpponent = '';
+        defeatedOpponentCounter = 0;
+        opponentHP = 0;
+        opponentCounterAttack = 0;
+        opponentImage = '';
+        $('#game-box').hide();
+        $('#new-game-box').hide();
+        $('#new-game-button').hide();
+        $('#defeated-box').text('');
+        $('#xWing').show();
+        $('#aWing').show();
+        $('#tieFighter').show();
+        $('#tieInterceptor').show();
+        $('#chooseCharacter').show();
 
+    });
+
+
+    //===========================
+    //Display New Game Button here
+    //===========================
+
+    function displayNewGameButton() {
+        $('#new-game-box').show();
+        $('#new-game-button').show();
+    }
 
 
 //BEGIN MAJOR SECTION 1: Game Set Up
@@ -69,6 +100,7 @@ $(document).ready(function () {
 
         alert('Choose your first opponent on the right!');
     });
+
 //END MAJOR SECTION ONE: Game Set Up
 //=========================================================
 //BEGIN MAJOR SECTION TWO: Opponent Selection
@@ -116,11 +148,13 @@ $(document).ready(function () {
                 defeatedOpponentCounter = defeatedOpponentCounter + 1;
                 if (defeatedOpponentCounter == 3) {
                     alert('Congratulations! You are Victorious!');
-                  // **** newGame(); //(make a new game button appear)
+                    displayNewGameButton();
 
                 }
 
-                //create div with an image of the defeated opponent
+                //create div with an image of the defeated opponent and place
+                //it into the defeated player box
+
                 $('#current-opponent').hide();
                 var defeatedDiv = $('<div>');
                 defeatedDiv.addClass('defeated-opponents');
@@ -144,13 +178,12 @@ $(document).ready(function () {
     //Use if statement to see if character is defeated, if so, display game over and New Game button
             if (playerHP <= 0) {
                 alert('Game Over! The Force is not strong with this one.')
-                //newGame();
+                displayNewGameButton();
             };
 
 
 //END MAJOR SECTION THREE: Attack Dynamics and Battle
 //=================================================
-//BEGIN MAJOR SECTION FOUR: Moving defeated characters s
 
 
 
