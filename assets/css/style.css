@@ -17,8 +17,11 @@ body {
     position: relative;
     width: 100%;
     text-align: center;
-    padding: 10px 0 10px 0;
-    font-size: 40px;
+    padding: 30px 0 0 0;
+    font-size: 50px;
+    background: -webkit-linear-gradient(yellow, white, yellow);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 #instructions-button {
@@ -66,7 +69,13 @@ body {
     /*Change disply property with Jquery at start and end of game*/
     position: relative;
     width: 66.66%;
-    margin: 30px auto 75px auto;
+    margin: 10px auto 75px auto;
+}
+
+#chooseCharacter, #game-box {
+    background: hsl(0, 0%, 50%, 0.25);
+    border: 2px solid rgb(41, 17, 48, 0.65);
+
 }
 
 .choose-image {
@@ -81,7 +90,7 @@ body {
     width: 40%;
     padding: 0;
     min-height: 200px;
-    border: 1px solid red;
+    border: 1px solid rgb(82, 8, 8);
     margin-top: 4%;
     margin-bottom: 0;
     margin-left: 6%;
@@ -98,7 +107,7 @@ body {
     display: none;
     position: relative;
     width: 66.66%;
-    margin: 30px auto 75px auto;
+    margin: 10px auto 75px auto;
 }
 
 #fire-button {
@@ -187,7 +196,9 @@ footer{
     left: 0;
     width: 100%;
     text-align: center;
-    padding: 20px 0 10px 0;
-    border-top: 5px solid blue;
+    padding: 5px 0 5px 0;
+    border-top: 5px solid rgb(10, 10, 88);
     margin-top: 20px;
+    color: rgb(190, 162, 201);
+    background-color: rgb(64, 5, 87, 0.5);
 }
