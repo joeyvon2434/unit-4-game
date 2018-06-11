@@ -227,18 +227,21 @@ h3 {
 }
 
 #new-game-box {
+    z-index: 1;
     display: none;
     position: fixed;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50vh;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70vh;
     opacity: 0.8;
-    background-color: rgba(19, 15, 15, 0.9);
+    background-color: rgb(28, 49, 28,0.9);
+   /* background-color: rgba(19, 15, 15, 0.9);*/
     border: 2px solid rgb(80, 4, 4);
 }
 
 #new-game-button {
+    z-index: 2;
     display: none;
     position: absolute;
     top: 45%;

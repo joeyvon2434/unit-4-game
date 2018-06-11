@@ -182,6 +182,7 @@ $(document).ready(function () {
                 if (defeatedOpponentCounter == 3) {
                     alert('Congratulations! You are Victorious!');
                     displayNewGameButton();
+                    $('#new-game-box').css("background-color","rgb(28, 49, 28,0.9");
                     
 
                 }
@@ -214,6 +215,7 @@ $(document).ready(function () {
             if (playerHP <= 0) {
                 alert('Game Over! The Force is not strong with this one.')
                 displayNewGameButton();
+                $('#new-game-box').css("background-color","rgb(156, 4, 4, 0.3)");
             };
 
         } else {
