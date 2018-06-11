@@ -51,6 +51,8 @@ $(document).ready(function () {
         $('#tieFighter').show();
         $('#tieInterceptor').show();
         $('#chooseCharacter').show();
+        $('#opponent-health').text('');
+        $('#opponent-attack').text('');
 
     });
 
@@ -203,7 +205,7 @@ $(document).ready(function () {
 
 
     //Continue with opponents counter attck and health decrease of character
-        if (defeatedOpponentCounter < 3) {    
+        if (defeatedOpponentCounter < 3 && allowOpponentSelect == false) {    
         playerHP = playerHP - opponentCounterAttack;
         $('#player-health').text('Health: ' + playerHP);
         $('#opponent-attack').text('Last Attack Damage: ' + opponentCounterAttack);

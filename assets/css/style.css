@@ -30,6 +30,7 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
+    cursor: pointer;
 }
 
 #instructions-box {
@@ -63,6 +64,7 @@ body {
     border: 1px solid black;
     text-align: center;
     font-size: 18px;
+    cursor: pointer;
 }
 
 #chooseCharacter {
@@ -103,6 +105,7 @@ body {
     margin-left: 6%;
     margin-right: 0;
     background: linear-gradient(black,rgb(34, 2, 49),black);
+    cursor: pointer;
 }
 
 .bottom-ship {
@@ -131,6 +134,7 @@ body {
     border: 1px solid white;
     border-radius: 5px;
     box-shadow: 5px 5px 5px black;
+    cursor: pointer;
 }
 
 .game-box-content {
@@ -187,6 +191,7 @@ h3 {
     min-height: 75px;
     padding: 0;
     margin: 10px auto 10px auto;
+    cursor: pointer;
 }
 
 .small-image {
@@ -217,7 +222,7 @@ h3 {
     width: 50%;
     height: 50vh;
     opacity: 0.8;
-    background-color: rgb(80, 79, 79, 0.9);
+    background-color: rgba(19, 15, 15, 0.9);
     border: 2px solid rgb(80, 4, 4);
 }
 
@@ -228,9 +233,14 @@ h3 {
     left: 40%;
     width: 20%;
     height: 10%;
-    background: green;
+    background: linear-gradient(green, rgb(110, 146, 110));
+    box-shadow: 0 0 40px rgb(70, 139, 70);
+    color: rgb(213, 233, 213);
     opacity: 1.0;
     font-size: 30px;
+    border: 2px solid rgb(151, 173, 151);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 footer{
