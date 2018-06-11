@@ -1,6 +1,15 @@
+*, h1, h2, h3, div {
+    font-family: 'Teko', arial, sans-serif;
+    letter-spacing: 1.2;
+}
+
 body {
     background-image: url("../images/space.png");
     background-size: cover;
+}
+
+a {
+    color: blue;
 }
 
 #wrapper {
@@ -18,10 +27,12 @@ body {
     width: 100%;
     text-align: center;
     padding: 30px 0 0 0;
-    font-size: 50px;
-    background: -webkit-linear-gradient(yellow, white, yellow);
+    font-size: 55px;
+    background: -webkit-linear-gradient(rgb(252, 252, 232), yellow);
     -webkit-background-clip: text;
     color: transparent;
+    font-weight: bold;
+    letter-spacing: 1.6;
 }
 
 #instructions-button {
@@ -31,6 +42,7 @@ body {
     top: 10px;
     right: 10px;
     cursor: pointer;
+    background: rgb(205, 205, 250);
 }
 
 #instructions-box {
@@ -41,7 +53,7 @@ body {
     left: 35%;
     width: 30%;
     border: 1px solid black;
-    background: white;
+    background: rgb(141, 193, 252, 0.9);
 }
 
 #instructions-box h2 {
