@@ -17,6 +17,16 @@ var allowOpponentSelect = true;
 
 $(document).ready(function () {
 
+    //Display and hide instructions
+
+    $('#instructions-button').on('click', function() {
+        $('#instructions-box').css('display', 'block');
+    });
+
+    $('#close-instructions').on('click', function() {
+        $('#instructions-box').hide();
+    });
+
     //===========================
     //create new game function here
     //===========================

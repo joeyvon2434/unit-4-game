@@ -16,6 +16,47 @@
     font-size: 40px;
 }
 
+#instructions-button {
+    z-index: 1;
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+#instructions-box {
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 35%;
+    width: 30%;
+    border: 1px solid black;
+    background: white;
+}
+
+#instructions-box h2 {
+    text-align: center;
+    padding: 20px 20px 5px 20px;
+    font-size: 20px;
+}
+
+#instructions-box p {
+    position: relative;
+    padding: 20px;
+}
+
+#close-instructions {
+    display: block;
+    position: relative;
+    width: 60%;
+    padding: 10px;
+    margin: 5px auto 20px auto;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 18px;
+}
+
 #chooseCharacter {
     /*Change disply property with Jquery at start and end of game*/
     position: relative;
