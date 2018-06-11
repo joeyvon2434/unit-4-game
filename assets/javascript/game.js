@@ -12,6 +12,7 @@ var defeatedOpponentCounter = 0;
 var opponentHP = 0;
 var opponentCounterAttack = 0;
 var opponentImage='';
+var allowOpponentSelect = true;
 
 
 $(document).ready(function () {
@@ -30,6 +31,7 @@ $(document).ready(function () {
         opponentHP = 0;
         opponentCounterAttack = 0;
         opponentImage = '';
+        allowOpponentSelect = true;
         $('#game-box').hide();
         $('#new-game-box').hide();
         $('#new-game-button').hide();
@@ -109,18 +111,24 @@ $(document).ready(function () {
     //after the current opponent is defeated
 
     //Identify selected opponent and display image in current opponent box and populate current opponent stats
-
+    
     $('.up-next').on('click', function() {
+
+        if (allowOpponentSelect == true) {
         currentOpponent = $(this).data('ship');
         opponentImage = $(this).data('image-link');
         opponentHP = $(this).data('health');
         opponentCounterAttack = $(this).data('counter-attack');
         $('#current-opponent').attr('src',opponentImage);
         $('#current-opponent').show();
+        allowOpponentSelect = false;
         
     //Hide selected opponent in remaining opponents box
 
     $(this).hide();
+    } else {
+        alert("you must defeat your current opponent before selecting a new opponent.");
+    }
 
     });//Close Opponent Selection
 
@@ -144,11 +152,13 @@ $(document).ready(function () {
             console.log('sa '+ playerAttack);
 
             //check for current opponent defeat and overall victory
-            if(opponentHP <= 0) {
+            if(opponentHP <= 0 && allowOpponentSelect == false) {
                 defeatedOpponentCounter = defeatedOpponentCounter + 1;
+                allowOpponentSelect = true;
                 if (defeatedOpponentCounter == 3) {
                     alert('Congratulations! You are Victorious!');
                     displayNewGameButton();
+                    
 
                 }
 
