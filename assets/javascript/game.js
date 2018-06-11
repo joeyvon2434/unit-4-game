@@ -111,7 +111,10 @@ $(document).ready(function () {
     //after the current opponent is defeated
 
     //Identify selected opponent and display image in current opponent box and populate current opponent stats
-    
+    //but first verify that an opponent has been selected.
+
+   
+
     $('.up-next').on('click', function() {
 
         if (allowOpponentSelect == true) {
@@ -125,13 +128,14 @@ $(document).ready(function () {
         
     //Hide selected opponent in remaining opponents box
 
-    $(this).hide();
-    } else {
-        alert("you must defeat your current opponent before selecting a new opponent.");
-    }
+        $(this).hide();
+        } else {
+        alert("You must defeat your current opponent before selecting a new opponent.");
+        }   
 
     });//Close Opponent Selection
 
+    
 
 //END MAJOR SECTION TWO: Opponent Selection
 //=================================================
@@ -143,7 +147,12 @@ $(document).ready(function () {
     //Use if statement to see if opponent is defeated. Move current opponent to defeated box add 1 to defeated 
     //opponent counter and check for victorty. If victorious, display a you win screen with
     //a new game button.
+    
+   
+    
         $('#fire-button').on('click', function() {
+
+        if (allowOpponentSelect == false) {
 
             opponentHP = opponentHP - playerAttack;
             console.log('hp' + opponentHP);
@@ -191,11 +200,18 @@ $(document).ready(function () {
                 displayNewGameButton();
             };
 
+        } else {
+            alert('You must select and opponent before firing.');
+        }
+
+        });
+
+//end if here
 
 //END MAJOR SECTION THREE: Attack Dynamics and Battle
 //=================================================
 
 
 
-    });
+    
 });
