@@ -1,3 +1,8 @@
+body {
+    background-image: url("../images/space.png");
+    background-size: cover;
+}
+
 #wrapper {
     position: absolute;
     top: 0;
