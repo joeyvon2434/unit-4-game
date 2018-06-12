@@ -22,14 +22,14 @@ a {
     margin: 0;
 }
 
-#star-destroyer {
+/*#star-destroyer {
     z-index: -1;
     position: fixed;
     top: 23%;
     right: -5%;
     width: 50%;
     max-width: 50%;
-}
+}*/
 
 #main-title {
     position: relative;
