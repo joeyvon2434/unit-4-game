@@ -53,6 +53,7 @@ a {
     left: 35%;
     width: 30%;
     border: 1px solid black;
+    background: rgb(61, 102, 163);
     background: rgb(141, 193, 252, 0.9);
 }
 
@@ -249,7 +250,7 @@ h5 {
     width: 70%;
     height: 70vh;
     opacity: 0.8;
-    background-color: rgb(28, 49, 28,0.9);
+    background-color: rgb(49, 50, 116);
    /* background-color: rgba(19, 15, 15, 0.9);*/
     border: 2px solid rgb(80, 4, 4);
 }
