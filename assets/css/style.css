@@ -43,6 +43,7 @@ a {
     right: 10px;
     cursor: pointer;
     background: rgb(205, 205, 250);
+    font-size: 18px;
 }
 
 #instructions-box {

@@ -17,6 +17,8 @@ var allowOpponentSelect = true;
 
 $(document).ready(function () {
 
+    $('#instructions-button').fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
+
     //Display and hide instructions
 
     $('#instructions-button').on('click', function() {
