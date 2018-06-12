@@ -1,4 +1,4 @@
-*, h1, h2, h3, div {
+*, h1, h2, h3, h4, h5, div {
     font-family: 'Teko', arial, sans-serif;
     letter-spacing: 1.2;
 }
@@ -167,6 +167,12 @@ h3 {
     font-size: 20px;
 }
 
+h4 {
+    margin-top:20px;
+}
+
+
+
 .game-stat {
     position: absolute;
     left: 10%;
@@ -212,11 +218,19 @@ h3 {
 }
 
 #defeated-box {
+    position: relative;
     width: 66.66%;
     min-height: 75px;
     margin: 0 auto 3% auto;
     border: 1px solid rgb(177, 10, 10);
     background-color: rgb(156, 4, 4, 0.3);
+}
+
+h5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
 }
 
 .defeated-opponents {
