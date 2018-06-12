@@ -42,15 +42,15 @@ $(document).ready(function () {
         opponentCounterAttack = 0;
         opponentImage = '';
         allowOpponentSelect = true;
-        $('#game-box').fadeOut(700);/*here*/
-        $('#new-game-box').fadeOut(700);/*here*/
-        $('#new-game-button').fadeOut(700);/*here*/
+        $('#game-box').fadeOut(500);/*here*/
+        $('#new-game-box').fadeOut(500);/*here*/
+        $('#new-game-button').fadeOut(500);/*here*/
         $('#defeated-box').text('');
         $('#xWing').show();
         $('#aWing').show();
         $('#tieFighter').show();
         $('#tieInterceptor').show();
-        $('#chooseCharacter').fadeIn(700);/*here*/
+        $('#chooseCharacter').delay(500).fadeIn(500);/*here*/
         $('#opponent-health').text('');
         $('#opponent-attack').text('');
 
@@ -136,12 +136,12 @@ $(document).ready(function () {
         opponentCounterAttack = $(this).data('counter-attack');
         $('#opponent-health').text('Health: ' + opponentHP);
         $('#current-opponent').attr('src',opponentImage);
-        $('#current-opponent').fadeIn(700); /*here*/
+        $('#current-opponent').fadeIn(400); /*here*/
         allowOpponentSelect = false;
         
     //Hide selected opponent in remaining opponents box
 
-        $(this).hide();
+        $(this).fadeOut(300);
         } else {
         alert("You must defeat your current opponent before selecting a new opponent.");
         }   
@@ -197,6 +197,7 @@ $(document).ready(function () {
                 defeatedImg.attr('src',opponentImage)
                 defeatedDiv.append(defeatedImg);
                 $('#defeated-box').append(defeatedDiv);
+        
 
                 if(defeatedOpponentCounter < 3){
                 alert('Select your next opponent!');
