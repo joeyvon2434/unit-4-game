@@ -28,6 +28,7 @@ a {
     top: 23%;
     right: -5%;
     width: 50%;
+    max-width: 50%;
 }
 
 #main-title {
