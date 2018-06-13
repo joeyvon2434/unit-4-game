@@ -55,6 +55,7 @@ $(document).ready(function () {
         $('#chooseCharacter').delay(500).fadeIn(500);/*here*/
         $('#opponent-health').text('');
         $('#opponent-attack').text('');
+        $('#game-end-message').fadeOut(500);
 
     });
 
@@ -66,6 +67,9 @@ $(document).ready(function () {
     function displayNewGameButton() {
         $('#new-game-box').fadeIn(700); /*here*/
         $('#new-game-button').fadeIn(700); /*here*/
+        $('#game-end-message').slideDown(700);
+       
+        
     }
 
 
@@ -181,9 +185,10 @@ $(document).ready(function () {
                 defeatedOpponentCounter = defeatedOpponentCounter + 1;
                 allowOpponentSelect = true;
                 if (defeatedOpponentCounter == 3) {
-                    alert('Congratulations! You are Victorious!');
+                    //alert('Congratulations! You are Victorious!');
                     displayNewGameButton();
                     $('#new-game-box').css("background-color","rgb(28, 49, 28,0.9");
+                    $('#game-end-message').text('Victory!');
                     
 
                 }
@@ -215,9 +220,10 @@ $(document).ready(function () {
         };
     //Use if statement to see if character is defeated, if so, display game over and New Game button
             if (playerHP <= 0) {
-                alert('Game Over! The Force is not strong with this one.')
+                //alert('Game Over! The Force is not strong with this one.')
                 displayNewGameButton();
                 $('#new-game-box').css("background-color","rgb(156, 4, 4, 0.3)");
+                $('#game-end-message').text('Game Over!');
             };
 
         } else {
