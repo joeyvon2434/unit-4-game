@@ -1,6 +1,8 @@
 # unit-4-game
 Star Wars starfighter game
 
+Link to deployed site: https://joeyvon2434.github.io/unit-4-game/
+
 Purpose: 
 This game was created to practice actively altering HTML using JQuery.
 
@@ -10,6 +12,9 @@ the page once loading is complte.
 
 Getting Started:
 Just load the page, read the instructions, and click away!
+
+Technical Approach: Everything functions on the same page. The game progresses as the user clicks through. Each portion of the
+is either shown or hidden depending on what the user does.
 
 Help:
 Feel free to email me @ joseph.vonedwins@yahoo.com if you
